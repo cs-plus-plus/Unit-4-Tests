@@ -69,7 +69,10 @@ public class Unit4Test {
 
         assertEquals(expectedOutput, outContent.toString());
         
-        unit4.printAsteriskPatterns(3);
+        outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        
+        unit4.printAsteriskPatterns(5);
 
         expectedOutput = 
         	"*****\n" + // line of 5
@@ -95,18 +98,22 @@ public class Unit4Test {
         unit4.multiplicationTable(3);
 
         String expectedOutput = 
-            "1\t2\t3\n" +
-            "2\t4\t6\n" +
-            "3\t6\t9\n";  // Multiplication table up to 3x3
+            "1\t2\t3\t\n" +
+            "2\t4\t6\t\n" +
+            "3\t6\t9\t\n";  // Multiplication table up to 3x3
 
         assertEquals(expectedOutput, outContent.toString());
         
+        outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        unit4.multiplicationTable(5);
+
         expectedOutput = 
-                "1\t2\t3\t4\t5\n" +
-                "2\t4\t6\t8\t10\n" +
-                "3\t6\t9\t12\t15\n" +
-                "4\t8\t12\t16\t20\n" + 
-                "5\t10\t15\t20\t25";  // Multiplication table up to 5x5
+                "1\t2\t3\t4\t5\t\n" +
+                "2\t4\t6\t8\t10\t\n" +
+                "3\t6\t9\t12\t15\t\n" +
+                "4\t8\t12\t16\t20\t\n" + 
+                "5\t10\t15\t20\t25\t\n";  // Multiplication table up to 5x5
 
             assertEquals(expectedOutput, outContent.toString());
     }
