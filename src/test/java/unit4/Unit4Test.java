@@ -38,7 +38,7 @@ public class Unit4Test {
         assertEquals(5, unit4.countVowels("aeiou")); // All vowels
         assertEquals(0, unit4.countVowels("bcdfg")); // No vowels
         assertEquals(0, unit4.countVowels("")); // Edge case: empty string
-        assertEquals(4, unit4.countVowels("Hello World")); // Mixed case
+        assertEquals(3, unit4.countVowels("Hello World")); // Mixed case
         assertEquals(8, unit4.countVowels("This is a simple sentence.")); // Multiple vowels
     }
 
