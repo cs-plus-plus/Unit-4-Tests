@@ -52,4 +52,4 @@ Feel free to submit issues or pull requests if you find bugs or have suggestions
 
 ## Contact
 
-For any questions, please contact [Mr. Hare](mailto:kevin@csplusplus.com).
+For any questions, please contact [kevin@csplusplus.com](mailto:kevin@csplusplus.com)
