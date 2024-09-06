@@ -32,16 +32,17 @@ public class Unit4 {
      return false;
  }
 
- // Method 6: Print different patterns of asterisks
+ // Method 6: Print different patterns of asterisks (use \n, not println)
  public void printAsteriskPatterns(int n) {
      // TODO: Implement the method to print patterns, such as:
      // 1. A line of n asterisks
      // 2. A square of n x n asterisks
-     // 3. A right triangle with n rows
+     // 3. A right triangle with n rows (right angle at bottom left)
  }
 
  // Method 7: Print a multiplication table up to n x n
  public void multiplicationTable(int n) {
      // TODO: Implement the method to print the multiplication table
+	 // each number should be separated by a tab
  }
 }
