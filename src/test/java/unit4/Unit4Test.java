@@ -38,7 +38,7 @@ public class Unit4Test {
         assertEquals(5, unit4.countVowels("aeiou")); // All vowels
         assertEquals(0, unit4.countVowels("bcdfg")); // No vowels
         assertEquals(0, unit4.countVowels("")); // Edge case: empty string
-        assertEquals(3, unit4.countVowels("Hello World")); // Mixed case
+        assertEquals(4, unit4.countVowels("Hello World")); // Mixed case
         assertEquals(8, unit4.countVowels("This is a simple sentence.")); // Multiple vowels
     }
 
@@ -59,12 +59,30 @@ public class Unit4Test {
         unit4.printAsteriskPatterns(3);
 
         String expectedOutput = 
+        	"***\n" + // line of 3
             "***\n" +
             "***\n" +
             "***\n" +  // Square pattern of 3x3
             "*\n" +
             "**\n" +
             "***\n";  // Right triangle pattern
+
+        assertEquals(expectedOutput, outContent.toString());
+        
+        unit4.printAsteriskPatterns(3);
+
+        expectedOutput = 
+        	"*****\n" + // line of 5
+            "*****\n" +
+            "*****\n" +
+            "*****\n" +
+            "*****\n" +
+            "*****\n" +  // Square pattern of 5x5
+            "*\n" +
+            "**\n" +
+            "***\n" + 
+            "****\n" +
+            "*****\n";  // Right triangle pattern
 
         assertEquals(expectedOutput, outContent.toString());
     }
@@ -77,10 +95,19 @@ public class Unit4Test {
         unit4.multiplicationTable(3);
 
         String expectedOutput = 
-            "1 2 3 \n" +
-            "2 4 6 \n" +
-            "3 6 9 \n";  // Multiplication table up to 3x3
+            "1\t2\t3\n" +
+            "2\t4\t6\n" +
+            "3\t6\t9\n";  // Multiplication table up to 3x3
 
         assertEquals(expectedOutput, outContent.toString());
+        
+        expectedOutput = 
+                "1\t2\t3\t4\t5\n" +
+                "2\t4\t6\t8\t10\n" +
+                "3\t6\t9\t12\t15\n" +
+                "4\t8\t12\t16\t20\n" + 
+                "5\t10\t15\t20\t25";  // Multiplication table up to 5x5
+
+            assertEquals(expectedOutput, outContent.toString());
     }
 }
