@@ -1,6 +1,6 @@
 {
   "name": "Java Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "image": "mcr.microsoft.com/devcontainers/java:21-maven",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -12,6 +12,5 @@
         "java.test.defaultConfig": "junit"
       }
     }
-  },
-  "postCreateCommand": "mvn --version"
+  }
 }
