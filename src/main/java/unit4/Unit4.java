@@ -2,6 +2,13 @@ package unit4;
 
 public class Unit4 {
 
+    public static void main(String[] args) {
+        // Test your methods here by creating an instance and calling methods
+        Unit4 unit = new Unit4();
+        // Example: test sumNumbers
+        System.out.println("sumNumbers(5) = " + unit.sumNumbers(5));  // Expected: 15
+    }
+
     /**
      * Calculates the sum of all integers from 1 to n (inclusive).
      * If n is 0 or negative, returns 0.

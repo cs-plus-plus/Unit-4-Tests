@@ -16,6 +16,8 @@ This project covers **Unit 4: Iteration** concepts including `while` loops, `for
 4. Wait for the environment to build (~2 minutes the first time)
 5. Start coding in `src/main/java/unit4/Unit4.java`
 
+> **Note:** If the Java extension shows errors on first load, press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows) and run **"Developer: Reload Window"**. This is a one-time setup step.
+
 ### Option 2: Local Development
 
 1. Accept the assignment via the GitHub Classroom link
