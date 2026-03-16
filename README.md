@@ -1,55 +1,109 @@
-# Unit 4 Java Programming Project
+# Unit 4: Iteration
 
-This project is designed for Mr. Hare's APCS-A, focusing on Unit 4 concepts such as loops, iteration, and nested loops. The project includes a set of methods that students need to implement, along with unit tests to verify their functionality.
+AP Computer Science A
 
-## Project Structure
+## Overview
 
-- **`Unit4.java`**: Contains method headers and task descriptions. Students are required to implement the method bodies.
-- **`Unit4Test.java`**: JUnit test cases for each method in `Unit4.java`. These tests validate the correctness of the implemented methods.
-- **`pom.xml`**: Maven configuration file that manages dependencies and plugins required to build and run the project.
-
-## Prerequisites
-
-- Java 17 (or compatible version)
-- Maven 3.x
+This project covers **Unit 4: Iteration** concepts including `while` loops, `for` loops, nested loops, and `String` traversal. Implement the 7 methods in `Unit4.java` and run the provided JUnit tests to verify your work.
 
 ## Getting Started
 
-### Accept the Project
+### Option 1: GitHub Codespaces (Recommended)
 
-Use the link found in Google Classroom to accept in GitHub Classroom.
+1. Click the green **Code** button on this repository
+2. Select the **Codespaces** tab
+3. Click **Create codespace on main**
+4. Wait for the environment to build (~2 minutes the first time)
+5. Start coding in `src/main/java/unit4/Unit4.java`
 
-### Clone the Repository
+### Option 2: Local Development
 
-Clone this repository to your local machine using GitHub Desktop.
+1. Accept the assignment via the GitHub Classroom link
+2. Clone the repository using GitHub Desktop
+3. Open the project in your IDE (VS Code, IntelliJ, or Eclipse)
+4. **Requirements:** Java 17+, Maven 3.x
 
-### Run Tests
+## Running Tests
 
-Run the JUnit tests to verify your implementations.
+### In VS Code / Codespaces
 
-## Method Descriptions
+Click the green play button next to any test method in `Unit4Test.java`, or open the **Testing** sidebar (beaker icon).
 
-Students need to implement the following methods in `Unit4.java`:
+### Command Line
 
-1. **`sumNumbers(int n)`**: Sums numbers from 1 to n using iteration.
-2. **`repeatString(String str, int n)`**: Repeats a given string n times.
-3. **`findFactorial(int n)`**: Finds the factorial of a given number using a loop.
-4. **`countVowels(String str)`**: Counts the number of vowels in a given string.
-5. **`isPalindrome(String str)`**: Checks if a string is a palindrome.
-6. **`printAsteriskPatterns(int n)`**: Prints different patterns of asterisks using nested loops.
-7. **`multiplicationTable(int n)`**: Prints a multiplication table up to n x n using nested loops.
+Run all tests:
+```
+mvn test
+```
 
-## Common Mistakes to Avoid
+Run a single method's tests:
+```
+mvn -Dtest=Unit4Test#testSumNumbers test
+```
 
-- Forgetting to change the loop variable, resulting in infinite loops.
-- Incorrect loop conditions that cause out-of-bounds errors or skip necessary iterations.
-- Using return statements inside loops incorrectly, leading to premature exits from the loop.
-- Misunderstanding the difference between `for` and `while` loops, especially regarding initialization and update steps.
+## Scoring
 
-## Contributing
+| # | Method | Points | Concepts |
+|---|--------|--------|----------|
+| 1 | `sumNumbers(int n)` | 10 | `for` loop, accumulator pattern |
+| 2 | `repeatString(String str, int n)` | 10 | `for` loop, String concatenation |
+| 3 | `findFactorial(int n)` | 15 | `for` loop, multiplication accumulator |
+| 4 | `countVowels(String str)` | 15 | `for` loop, `charAt()`, conditionals |
+| 5 | `isPalindrome(String str)` | 20 | `for` loop, `charAt()`, String comparison |
+| 6 | `printAsteriskPatterns(int n)` | 15 | Nested loops, `System.out.print()` |
+| 7 | `multiplicationTable(int n)` | 15 | Nested loops, `System.out.print()` |
+| | **Total** | **100** | |
 
-Feel free to submit issues or pull requests if you find bugs or have suggestions for improvement.
+## Method Details
+
+### 1. `sumNumbers(int n)` — 10 points
+Returns the sum of all integers from 1 to n (inclusive).
+- `sumNumbers(5)` → `15`
+- `sumNumbers(1)` → `1`
+- `sumNumbers(0)` → `0`
+
+### 2. `repeatString(String str, int n)` — 10 points
+Returns the string repeated n times.
+- `repeatString("hello", 3)` → `"hellohellohello"`
+- `repeatString("hello", 0)` → `""`
+
+### 3. `findFactorial(int n)` — 15 points
+Returns n! (n factorial).
+- `findFactorial(5)` → `120`
+- `findFactorial(0)` → `1`
+
+### 4. `countVowels(String str)` — 15 points
+Counts vowels (a, e, i, o, u) in the string — both upper and lowercase.
+- `countVowels("Hello World")` → `3`
+- `countVowels("aeiou")` → `5`
+
+### 5. `isPalindrome(String str)` — 20 points
+Checks if a string reads the same forwards and backwards. **Case-sensitive!**
+- `isPalindrome("racecar")` → `true`
+- `isPalindrome("RaceCar")` → `false`
+
+### 6. `printAsteriskPatterns(int n)` — 15 points
+Prints three patterns using `System.out.print()` with `\n` for newlines:
+1. A single line of n asterisks
+2. An n × n square of asterisks
+3. A right triangle with n rows (right angle at bottom-left)
+
+### 7. `multiplicationTable(int n)` — 15 points
+Prints an n × n multiplication table. Each number is followed by a tab (`\t`), each row ends with `\n`.
+
+## Common Mistakes
+
+- Initializing an accumulator at the wrong value (`sum = 1` instead of `sum = 0`, or `product = 0` instead of `product = 1`)
+- Off-by-one errors in loop bounds (`<` vs `<=`)
+- Using `println()` instead of `print()` with `\n` for the pattern methods
+- Forgetting that `String.charAt()` returns a `char`, not a `String`
+- Not handling edge cases (empty strings, n = 0)
+- Infinite loops from forgetting to update the loop variable
+
+## Autograding
+
+Your code is automatically graded when you push to GitHub. Check the **Actions** tab to see your score. Each method is tested independently — you earn points for each method you complete correctly.
 
 ## Contact
 
-For any questions, please contact [kevin@csplusplus.com](mailto:kevin@csplusplus.com)
+For questions, contact [kevin@csplusplus.com](mailto:kevin@csplusplus.com)
