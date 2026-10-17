@@ -20,7 +20,7 @@ jobs:
         distribution: 'temurin'
     - name: sumNumbers
       id: sumnumbers
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: sumNumbers
         setup-command: mvn compile
@@ -29,7 +29,7 @@ jobs:
         max-score: 10
     - name: repeatString
       id: repeatstring
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: repeatString
         setup-command: mvn compile
@@ -38,7 +38,7 @@ jobs:
         max-score: 10
     - name: findFactorial
       id: findfactorial
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: findFactorial
         setup-command: mvn compile
@@ -47,7 +47,7 @@ jobs:
         max-score: 15
     - name: countVowels
       id: countvowels
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: countVowels
         setup-command: mvn compile
@@ -56,7 +56,7 @@ jobs:
         max-score: 15
     - name: isPalindrome
       id: ispalindrome
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: isPalindrome
         setup-command: mvn compile
@@ -65,7 +65,7 @@ jobs:
         max-score: 20
     - name: printAsteriskPatterns
       id: printasteriskpatterns
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: printAsteriskPatterns
         setup-command: mvn compile
@@ -74,7 +74,7 @@ jobs:
         max-score: 15
     - name: multiplicationTable
       id: multiplicationtable
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: multiplicationTable
         setup-command: mvn compile
@@ -82,7 +82,7 @@ jobs:
         timeout: 10
         max-score: 15
     - name: Autograding Reporter
-      uses: classroom-resources/autograding-grading-reporter@v1
+      uses: cs-plus-plus/autograding-grading-reporter@v1
       env:
         SUMNUMBERS_RESULTS: "${{steps.sumnumbers.outputs.result}}"
         REPEATSTRING_RESULTS: "${{steps.repeatstring.outputs.result}}"
